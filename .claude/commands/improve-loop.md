@@ -14,7 +14,7 @@ Run the Improve Loop workflow defined in `.claude/skills/workflows/improve-loop-
 
 This is an iterative feature improvement meta-workflow. It takes an existing feature, analyzes it from rotating expert angles, generates substantial improvement seeds, delegates to the full /factory pipeline, then repeats N times. Each cycle builds on the previous — the feature gets progressively better.
 
-This workflow runs in its own worktree for full isolation. It uses a bounded Ralph Loop — it stops after N cycles (default 5).
+Before starting, check if you are already inside a git worktree by comparing the output of `git rev-parse --git-common-dir` and `git rev-parse --git-dir` — if they differ, you are already in a worktree and MUST skip worktree creation. Only create a new worktree if you are in the main repository. It uses a bounded Ralph Loop — it stops after N cycles (default 5).
 
 Follow every phase in order, respecting all gates, agent personas, and veto rules. Use the full workflow instructions — do not skip or summarize phases.
 

@@ -14,7 +14,7 @@ Run the Idea-to-App workflow defined in `.claude/skills/workflows/idea-to-app-wo
 
 This workflow takes a brief idea (1-4 sentences) and produces a fully running, tested, polished application from scratch. It orchestrates 7 phases: Product Vision, Project Scaffold, Feature Decomposition, Factory Execution, Improvement Cycles, Final Polish, and Deliverable Report.
 
-This workflow runs in its own worktree for full isolation. It runs through 7 phases and then stops.
+Before starting, check if you are already inside a git worktree by comparing the output of `git rev-parse --git-common-dir` and `git rev-parse --git-dir` — if they differ, you are already in a worktree and MUST skip worktree creation. Only create a new worktree if you are in the main repository. It runs through 7 phases and then stops.
 
 Follow every phase in order, respecting all gates, agent personas, and veto rules. Use the full workflow instructions — do not skip or summarize phases.
 

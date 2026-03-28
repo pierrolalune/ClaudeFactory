@@ -12,7 +12,9 @@ description: Run the Feature Factory workflow for autonomous feature delivery
 
 Run the Feature Factory workflow defined in `.claude/skills/workflows/feature-factory-workflow.md`.
 
-This workflow runs in its own worktree for full isolation. It uses Ralph Loop for continuous, autonomous execution — it will never stop on its own.
+Before starting, check if you are already inside a git worktree by comparing the output of `git rev-parse --git-common-dir` and `git rev-parse --git-dir` — if they differ, you are already in a worktree and MUST skip worktree creation. Only create a new worktree if you are in the main repository.
+
+It uses Ralph Loop for continuous, autonomous execution — it will never stop on its own.
 
 Follow every phase in order, respecting all gates, agent personas, and veto rules. Use the full workflow instructions — do not skip or summarize phases.
 
